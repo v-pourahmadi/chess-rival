@@ -13,6 +13,9 @@ positions with a hand-written formula. The method dates back to Claude Shannon
 📖 **[How the rival thinks](HOW-THE-ENGINE-WORKS.md)** explains how it picks moves
 and what each difficulty level changes.
 
+🧭 **[Code tour](CODE-TOUR.md)** shows where to look in the code: follow one move
+from your tap to the rival's answer, with links to the exact lines.
+
 ## Project layout
 
 ```
