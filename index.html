@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#262421">
+  <title>Chess Rival</title>
+  <meta name="description" content="Play chess against a small, readable classic chess engine with beginner, medium and hard levels.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♞</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Chess Rival</h1>
+    <a class="guide-link" href="https://github.com/v-pourahmadi/chess-rival/blob/main/HOW-THE-ENGINE-WORKS.md" target="_blank" rel="noopener">How does it think?</a>
+  </header>
+
+  <main class="layout">
+    <section class="board-area">
+      <div id="status" class="status" role="status" aria-live="polite">Your move</div>
+      <div id="board" class="board" aria-label="Chess board"></div>
+      <div class="buttons">
+        <button id="undo" type="button">Take back</button>
+        <button id="new-game" type="button" class="primary">New game</button>
+      </div>
+    </section>
+
+    <aside class="side">
+      <div class="panel">
+        <h2>Difficulty</h2>
+        <div id="levels" class="segmented" role="radiogroup" aria-label="Difficulty">
+          <button type="button" data-level="beginner" role="radio">Beginner</button>
+          <button type="button" data-level="medium" role="radio">Medium</button>
+          <button type="button" data-level="hard" role="radio">Hard</button>
+        </div>
+        <p id="level-summary" class="muted small"></p>
+
+        <h2>You play</h2>
+        <div id="colors" class="segmented" role="radiogroup" aria-label="Your color">
+          <button type="button" data-color="w" role="radio">White</button>
+          <button type="button" data-color="b" role="radio">Black</button>
+        </div>
+        <p class="muted small">Changing color starts a new game.</p>
+      </div>
+
+      <div class="panel">
+        <h2>What the rival was thinking</h2>
+        <div id="engine-info" class="engine-info">
+          <p class="muted">After the rival moves, you'll see how far it looked ahead, how many positions it checked, the line it expects, and (on Beginner and Medium) how random noise changed its choice.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Moves</h2>
+        <ol id="moves" class="moves"></ol>
+      </div>
+    </aside>
+  </main>
+
+  <dialog id="promotion" class="promotion">
+    <p>Promote to:</p>
+    <div id="promotion-choices" class="promotion-choices"></div>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

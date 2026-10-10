@@ -1,0 +1,11 @@
+{
+  "name": "chess-rival",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Play chess in the browser against a small, readable classic chess engine.",
+  "scripts": {
+    "test": "node tests/perft.test.js && node tests/engine.test.js"
+  },
+  "license": "MIT"
+}
